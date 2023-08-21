@@ -6,6 +6,8 @@ import postData from '../../../data/postData.json'
 import HomeButton from '@/components/HomeButton';
 import CommentsSection from '@/components/CommentsSection';
 import Image from 'next/image';
+import dynamic from 'next/dynamic'
+
 // import ReactGA from 'react-ga4';
 
 
@@ -18,13 +20,10 @@ const thisPost = postData.filter(thing => (thing.URLTitle===thisPostURL))[0];
   ReactGA.send({ hitType: "pageview", page: thisPost.URLTitle, title: thisPost.URLTitle});
 }, []) */
 
-function loadReviewText(fileName) {
-  const postText = React.lazy(() =>
-    import(`./(posts)/${fileName}`)
-  );
-  return postText;
-}
-const PostText = loadReviewText(thisPost.mainTextFile);
+
+const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile), {
+  ssr: false,
+})
 
   return(
     <>
@@ -50,9 +49,7 @@ const PostText = loadReviewText(thisPost.mainTextFile);
     </div>
    </>
     }
-    <Suspense>
     <div><PostText /></div>
-    </Suspense>
     <hr></hr>
     <CommentsSection section={thisPost.previewHeadline}/>
     </>
