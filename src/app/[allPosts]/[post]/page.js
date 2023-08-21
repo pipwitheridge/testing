@@ -1,12 +1,11 @@
 'use client'
 
 import React, { Suspense, useEffect } from 'react';
-import { useParams } from 'next/navigation';
 import postData from '../../../data/postData.json'
 import HomeButton from '@/components/HomeButton';
 import CommentsSection from '@/components/CommentsSection';
 import Image from 'next/image';
-import dynamic from 'next/dynamic'
+import { lazy } from 'react';
 
 // import ReactGA from 'react-ga4';
 
@@ -19,7 +18,7 @@ export async function generateStaticParams() {
  
 export default function Post({params}) {
 
-  console.log(generateStaticParams())
+console.log(generateStaticParams())
 
 const { allPosts, post } = params;
 
@@ -29,9 +28,8 @@ const thisPost = postData.filter((thing) => thing.URLTitle===post)[0];
   ReactGA.send({ hitType: "pageview", page: thisPost.URLTitle, title: thisPost.URLTitle});
 }, []) */
 
-const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile), {
-  ssr: false,
-})
+const PostText = lazy(() => import('../[post]/(posts)/'+thisPost.mainTextFile));
+
 
   return(
     <>
@@ -59,7 +57,9 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
     }
     {thisPost &&
     <>
+    <Suspense>
     <div><PostText /></div>
+    </Suspense>
     <hr></hr>
     <CommentsSection section={thisPost && thisPost.previewHeadline}/>
     </>
