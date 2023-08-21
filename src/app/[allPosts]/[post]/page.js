@@ -28,7 +28,7 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
   return(
     <>
     <HomeButton />
-   {thisPost.postType==="books" ?
+   {thisPost && thisPost.postType==="books" ?
    <>
     <div className="mb-3">
     <div className='d-flex justify-content-center mb-5'>
