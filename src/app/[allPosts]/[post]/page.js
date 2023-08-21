@@ -10,23 +10,22 @@ import dynamic from 'next/dynamic'
 
 // import ReactGA from 'react-ga4';
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return postData.map((thing) => ({
     allPosts: thing.postType,
     post: thing.URLTitle
   }))
 }
  
-function Post({params}) {
+export default function Post({params}) {
 
 const { allPosts, post } = params;
 
-const thisPost = postData.filter(thing => (thing.URLTitle === post))[0];
+const thisPost = postData.filter((thing) => thing.URLTitle===post)[0];
 
 /* useEffect(() => {
   ReactGA.send({ hitType: "pageview", page: thisPost.URLTitle, title: thisPost.URLTitle});
 }, []) */
-
 
 const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile), {
   ssr: false,
@@ -35,25 +34,24 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
   return(
     <>
     <HomeButton />
-   {thisPost &&
-    thisPost.postType==="books" ?
+   {allPosts==="books" ?
     <>
     <div className="mb-3">
     <div className='d-flex justify-content-center mb-5'>
-    <Image alt="Cover Image" className="img-fluid postMasterImage" src={thisPost && require('../../../../public/images/'+thisPost.coverImage)}></Image>
+    <Image alt="Cover Image" className="img-fluid postMasterImage" src={require('../../../../public/images/'+thisPost.coverImage)}></Image>
     </div>
-    <div className='d-flex justify-content-center mb-3 postPageHeadline'>{thisPost && thisPost.bookTitle}</div>
-    <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost && thisPost.authorLine}</div>
+    <div className='d-flex justify-content-center mb-3 postPageHeadline'>{thisPost.bookTitle}</div>
+    <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost.authorLine}</div>
     </div>
    </>
     : 
    <>
    <div className="mb-3">
     <div className='d-flex justify-content-center mb-5'>
-    <Image alt="Cover Image" className="img-fluid postMasterImage" src={thisPost && require('../../../../public/images/'+thisPost.coverImage)}></Image>
+    <Image alt="Cover Image" className="img-fluid postMasterImage" src={require('../../../../public/images/'+thisPost.coverImage)}></Image>
     </div>
-    <div className='d-flex justify-content-center mb-3 postPageHeadline'>{thisPost && thisPost.previewHeadline}</div>
-    <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost && thisPost.previewBody}</div>
+    <div className='d-flex justify-content-center mb-3 postPageHeadline'>{thisPost.previewHeadline}</div>
+    <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost.previewBody}</div>
     </div>
    </>
     }
@@ -61,12 +59,9 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
     <>
     <div><PostText /></div>
     <hr></hr>
-    <CommentsSection section={thisPost && thisPost.previewHeadline}/>
+    <CommentsSection section={thisPost.previewHeadline}/>
     </>
     }
     
     </>
   )}
-  
-   
-  export default Post;

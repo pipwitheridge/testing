@@ -6,6 +6,7 @@ import PreviewSection from '@/components/PreviewSection';
 import GoogleAnalyticsTag from '@/components/GoogleAnalyticsTag';
 import Image from 'next/image';
 import profilePic from '../../public/images/profilePic.jpeg'
+import postData from '../data/postData.json'
 
 export default function Home() {  
 
