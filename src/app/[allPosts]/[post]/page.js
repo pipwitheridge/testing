@@ -21,7 +21,7 @@ const thisPost = postData.filter(thing => (thing.URLTitle===thisPostURL))[0];
 }, []) */
 
 
-const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile), {
+const PostText = dynamic(() => import('../[post]/(posts)/TheMoralLandscape.js'), {
   ssr: false,
 })
 
