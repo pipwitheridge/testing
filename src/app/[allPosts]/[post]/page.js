@@ -35,8 +35,8 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
     <div className='d-flex justify-content-center mb-5'>
     <Image alt="Cover Image" className="img-fluid postMasterImage" src={thisPost && require('../../../../public/images/'+thisPost.coverImage)}></Image>
     </div>
-    <div className='d-flex justify-content-center mb-3 postPageHeadline'>{thisPost.bookTitle}</div>
-    <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost.authorLine}</div>
+    <div className='d-flex justify-content-center mb-3 postPageHeadline'>{thisPost && thisPost.bookTitle}</div>
+    <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost && thisPost.authorLine}</div>
     </div>
    </>
     : 
@@ -45,8 +45,8 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
     <div className='d-flex justify-content-center mb-5'>
     <Image alt="Cover Image" className="img-fluid postMasterImage" src={thisPost && require('../../../../public/images/'+thisPost.coverImage)}></Image>
     </div>
-    <div className='d-flex justify-content-center mb-3 postPageHeadline'>{thisPost.previewHeadline}</div>
-    <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost.previewBody}</div>
+    <div className='d-flex justify-content-center mb-3 postPageHeadline'>{thisPost && thisPost.previewHeadline}</div>
+    <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost && thisPost.previewBody}</div>
     </div>
    </>
     }
@@ -54,7 +54,7 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
     <>
     <div><PostText /></div>
     <hr></hr>
-    <CommentsSection section={thisPost.previewHeadline}/>
+    <CommentsSection section={thisPost && thisPost.previewHeadline}/>
     </>
     }
     
