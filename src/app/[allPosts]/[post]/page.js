@@ -28,7 +28,7 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
   return(
     <>
     <HomeButton />
-   {thisPost ?
+   {thisPost &&
     thisPost.postType==="books" ?
     <>
     <div className="mb-3">
@@ -49,12 +49,14 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
     <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost.previewBody}</div>
     </div>
    </>
-    :
-    null
     }
+    {thisPost &&
+    <>
     <div><PostText /></div>
     <hr></hr>
     <CommentsSection section={thisPost.previewHeadline}/>
+    </>
+    }
     
     </>
   )}
