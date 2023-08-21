@@ -28,8 +28,9 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
   return(
     <>
     <HomeButton />
-   {thisPost && thisPost.postType==="books" ?
-   <>
+   {thisPost ?
+    thisPost.postType==="books" ?
+    <>
     <div className="mb-3">
     <div className='d-flex justify-content-center mb-5'>
     <Image alt="Cover Image" className="img-fluid postMasterImage" src={require(('../../../../public/images/')+thisPost.coverImage)}></Image>
@@ -48,10 +49,13 @@ const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile
     <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost.previewBody}</div>
     </div>
    </>
+    :
+    null
     }
     <div><PostText /></div>
     <hr></hr>
     <CommentsSection section={thisPost.previewHeadline}/>
+    
     </>
   )}
   
