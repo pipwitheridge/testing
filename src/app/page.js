@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import { AiFillPhone, AiOutlineMail } from 'react-icons/ai';
-import profilePic from '../images/profilePic.jpeg';
-import Image from 'next/image';
 import './globals.css'
 import Link from 'next/link';
 import PreviewSection from '@/components/PreviewSection';
 import GoogleAnalyticsTag from '@/components/GoogleAnalyticsTag';
+import Image from 'next/image';
+import profilePic from '../../public/images/profilePic.jpeg'
 
 export default function Home() {  
 
