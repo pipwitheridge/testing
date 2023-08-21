@@ -10,18 +10,25 @@ import dynamic from 'next/dynamic'
 
 // import ReactGA from 'react-ga4';
 
+export function generateStaticParams() {
+  return postData.map((thing) => ({
+    allPosts: thing.postType,
+    post: thing.URLTitle
+  }))
+}
+ 
+function Post({params}) {
 
-function Post() {
-const params = useParams();
-const thisPostURL = params.post
-const thisPost = postData.filter(thing => (thing.URLTitle===thisPostURL))[0];
+const { allPosts, post } = params;
+
+const thisPost = postData.filter(thing => (thing.URLTitle === post))[0];
 
 /* useEffect(() => {
   ReactGA.send({ hitType: "pageview", page: thisPost.URLTitle, title: thisPost.URLTitle});
 }, []) */
 
 
-const PostText = dynamic(() => import('../[post]/(posts)/TheMoralLandscape.js'), {
+const PostText = dynamic(() => import('../[post]/(posts)/'+thisPost.mainTextFile), {
   ssr: false,
 })
 
