@@ -18,8 +18,6 @@ export async function generateStaticParams() {
  
 export default function Post({params}) {
 
-console.log(generateStaticParams())
-
 const { allPosts, post } = params;
 
 const thisPost = postData.filter((thing) => thing.URLTitle===post)[0];
@@ -33,7 +31,7 @@ const PostText = lazy(() => import('../[post]/(posts)/'+thisPost.mainTextFile));
 
   return(
     <>
-    <HomeButton />
+    <HomeButton /> {/*
    {allPosts==="books" ?
     <>
     <div className="mb-3">
@@ -54,14 +52,14 @@ const PostText = lazy(() => import('../[post]/(posts)/'+thisPost.mainTextFile));
     <div className='d-flex justify-content-center mb-5 postPageAuthorLine'>{thisPost && thisPost.previewBody}</div>
     </div>
    </>
-    }
+    }*/}
     {thisPost &&
     <>
     <Suspense>
     <div><PostText /></div>
     </Suspense>
     <hr></hr>
-    <CommentsSection section={thisPost && thisPost.previewHeadline}/>
+    {/*<CommentsSection section={thisPost && thisPost.previewHeadline}/>*/}
     </>
     }
     
