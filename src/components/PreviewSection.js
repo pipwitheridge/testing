@@ -17,7 +17,7 @@ export default function PreviewSection(props) {
         return(
         <>
         <div className="d-flex mb-2 blogPreviewItem">
-        <Link href={bit.postType+"/"+bit.URLTitle} className="bookPreview">
+        <Link href={"./"+bit.postType+"/"+bit.URLTitle} className="bookPreview">
         <div className="d-flex flex-lg-column flex-sm-row">
         <div className="mb-2"><Image className="img img-fluid" style={{borderRadius: 5}} src={require(('../../public/images/')+bit.coverImage)} alt="Book cover or blog post image"></Image></div>
         <div className="d-flex flex-column blogPreviewText">

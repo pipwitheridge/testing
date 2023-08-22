@@ -15,8 +15,12 @@ export async function generateStaticParams() {
     post: thing.URLTitle
   }))
 }
+
  
 export default function Post({params}) {
+
+  console.log(params)
+
 
 const { allPosts, post } = params;
 
