@@ -1,22 +1,23 @@
 'use client' 
 
 import React from 'react';
-import { useParams } from 'next/navigation';
-import Link from 'next/link';
-import postData from '../../data/postData.json'
+//import { useParams } from 'next/navigation';
+//import Link from 'next/link';
+//import postData from '../../data/postData.json'
 import HomeButton from '@/components/HomeButton';
-import Image from 'next/image';
+//import Image from 'next/image';
 
 function AllPosts() {
   
-  const params = useParams();
-  const posttype = params.allPosts
+  //const params = useParams();
+  //const posttype = params.allPosts
 
   return(
     <>
-    <HomeButton /> 
-    <div>TESTING WITHOUT OTHER STUFF</div>
-    {/*<div className="mb-4"><h3>{posttype==="books" ? "Book Reviews" : "All Posts"}</h3></div>
+        <div>TESTING WITHOUT OTHER STUFF</div>
+
+    {/*<HomeButton /> 
+    <div className="mb-4"><h3>{posttype==="books" ? "Book Reviews" : "All Posts"}</h3></div>
         <div className="d-flex flex-wrap inline justify-content-between">
         {postData.filter(bit => bit.postType === posttype).map(bit => {
           return(
