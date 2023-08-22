@@ -30,7 +30,7 @@ const thisPost = postData.filter((thing) => thing.URLTitle===post)[0];
   ReactGA.send({ hitType: "pageview", page: thisPost.URLTitle, title: thisPost.URLTitle});
 }, []) */
 
-const PostText = lazy(() => import('../[post]/(posts)/'+thisPost.mainTextFile));
+const PostText = lazy(() => import('../../../components/posts/'+thisPost.mainTextFile));
 
 
   return(

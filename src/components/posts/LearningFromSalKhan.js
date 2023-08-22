@@ -22,7 +22,7 @@ The third reason I decided to give it a go is a little more subtle. Part of the 
 A couple years ago I came across a video by Sal Khan explaining why Khan Academy works. In essence, it works because it aims to teach students where they are at. It helps students master concepts before moving onto the next ones. By contrast, in traditional classroom schooling, the teacher tries to help a group of students understand a topic all at the same time. They sit an exam, and then move onto the next grade if they pass—whether you get 95%, 80% or 51% doesn’t matter. As time goes on, they learn new concepts which build on top of the concepts they learned previously. The problem is, if students only had a shallow understanding of previous concepts, they won’t get far with the advanced concepts which build on the initial foundations. In this sense, traditional classroom education can be represented with the following graph: 
 </p>
 
-<div className="d-flex justify-content-around mt-5"><Image alt="Time verses mastery image." style={{maxWidth: "400px", height: "auto"}} src={require('../../../../../public/images/timeVmasteryT.png')}></Image></div>
+<div className="d-flex justify-content-around mt-5"><Image alt="Time verses mastery image." style={{maxWidth: "400px", height: "auto"}} src={require('../../../public/images/timeVmasteryT.png')}></Image></div>
 
 
 <p>
@@ -39,7 +39,7 @@ Doesn’t this happen in church, too? Isn’t it the case that on any given Sund
 Khan Academy—and many other forms of online learning—try to flip these variables around. Khan Academy has a large collection of short online videos, articles and quizzes to help students learn at their own pace. The idea is that students can increase their level of mastery by rewatching lessons when needed and revisiting concepts that they need to. In the ideal scenario, this form of education can be represented with the following graph: 
 </p>
 
-<div className="d-flex justify-content-around mt-5"><Image alt="Mastery verses time image." style={{maxWidth: "400px", height: "auto"}} src={require('../../../../../public/images/timeVmasteryM.png')}></Image></div>
+<div className="d-flex justify-content-around mt-5"><Image alt="Mastery verses time image." style={{maxWidth: "400px", height: "auto"}} src={require('../../../public/images/timeVmasteryM.png')}></Image></div>
 
 
 <p>
