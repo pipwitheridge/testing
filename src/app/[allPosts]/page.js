@@ -14,8 +14,9 @@ function AllPosts() {
 
   return(
     <>
-    <HomeButton />
-    <div className="mb-4"><h3>{posttype==="books" ? "Book Reviews" : "All Posts"}</h3></div>
+    <HomeButton /> 
+    <div>TESTING WITHOUT OTHER STUFF</div>
+    {/*<div className="mb-4"><h3>{posttype==="books" ? "Book Reviews" : "All Posts"}</h3></div>
         <div className="d-flex flex-wrap inline justify-content-between">
         {postData.filter(bit => bit.postType === posttype).map(bit => {
           return(
@@ -35,7 +36,7 @@ function AllPosts() {
           )
         })}
         <div className="blogPreviewItem"></div>
-        </div>
+      </div>*/}
 
     </>
   )}
