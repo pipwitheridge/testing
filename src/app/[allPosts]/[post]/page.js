@@ -63,7 +63,7 @@ const PostText = lazy(() => import('../../../components/posts/'+thisPost.mainTex
     <div><PostText /></div>
     </Suspense>
     <hr></hr>
-    {/*<CommentsSection section={thisPost && thisPost.previewHeadline}/>*/}
+    <CommentsSection section={thisPost && thisPost.previewHeadline}/>
     </>
     }
     
