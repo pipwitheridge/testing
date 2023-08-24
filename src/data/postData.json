@@ -2,6 +2,18 @@
   {
     "number": 1,
     "postType": "books",
+    "postDate": "24th August 2023",
+    "bookTitle": "A Joined-Up Life",
+    "URLTitle": "joined-up-life",
+    "authorLine": "By Andrew Cameron",
+    "coverImage": "joinedUpLife.png",
+    "previewHeadline": "Let's get ethical",
+    "previewBody": "A Christian account of how ethics works.",
+    "mainTextFile": "AJoinedUpLife.js"
+  },
+  {
+    "number": 1,
+    "postType": "books",
     "postDate": "26th July 2023",
     "bookTitle": "Textual Criticism of the Bible",
     "URLTitle": "textual-criticism-of-the-bible",
@@ -24,7 +36,7 @@
     "mainTextFile": "ThePurposeDrivenChurch.js"
   },
   {
-    "number": 1,
+    "number": 4,
     "postType": "books",
     "postDate": "7th June 2023",
     "bookTitle": "The Innovators",
