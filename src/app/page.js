@@ -18,7 +18,7 @@ export default function Home() {
     <div className="d-flex justify-content-center mt-5 mb-4"><Image alt="Cover Image" src={profilePic} className="profilePic"></Image></div> 
     <div className="d-flex justify-content-center mb-3" style={{fontSize: 30, fontWeight: 600}}>Pip Witheridge</div>
     <div className="d-flex justify-content-center mb-3">
-    <span style={{textAlign: "center"}}>theology student from Sydney, co-host The Bible Boyz <Link className="smallAnchor" href="https://anchor.fm/the-bible-boyz">podcast</Link>, sometimes <Link className="smallAnchor" href="https://pipwitheridge.github.io/#/blog/my-coding">code</Link></span>
+    <span style={{textAlign: "center"}}>theology student from Sydney, co-host The Bible Boyz <Link className="smallAnchor" href="https://anchor.fm/the-bible-boyz">podcast</Link>, sometimes <Link className="smallAnchor" href="https://pipwitheridge.vercel.app/blog/my-coding">code</Link></span>
     </div>
     <br></br>
     <PreviewSection postType="books" sectionHeader={"Book Reviews"}/>    
