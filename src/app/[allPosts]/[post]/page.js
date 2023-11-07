@@ -6,6 +6,7 @@ import HomeButton from '@/components/HomeButton';
 import CommentsSection from '@/components/CommentsSection';
 import Image from 'next/image';
 import { lazy } from 'react';
+import GoogleAnalyticsTag from '@/components/GoogleAnalyticsTag';
 
 // import ReactGA from 'react-ga4';
 
@@ -35,6 +36,7 @@ const PostText = lazy(() => import('../../../components/posts/'+thisPost.mainTex
 
   return(
     <>
+    <GoogleAnalyticsTag />
     <HomeButton /> 
    {allPosts==="books" ?
     <>

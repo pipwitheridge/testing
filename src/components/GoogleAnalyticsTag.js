@@ -11,7 +11,9 @@ export default function GoogleAnalyticsTag() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', 'G-7XD03E57PD');
+          gtag('config', 'G-7XD03E57PD', {
+            page_path: window.location.pathname,
+            });
         `}
       </Script>
     </div>

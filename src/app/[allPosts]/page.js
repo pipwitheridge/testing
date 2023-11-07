@@ -6,6 +6,7 @@ import Link from 'next/link';
 import postData from '../../data/postData.json'
 import HomeButton from '@/components/HomeButton';
 import Image from 'next/image';
+import GoogleAnalyticsTag from '@/components/GoogleAnalyticsTag';
 
 function AllPosts() {
   
@@ -14,6 +15,7 @@ function AllPosts() {
 
   return(
     <>
+    <GoogleAnalyticsTag />
     <HomeButton /> 
     <div className="mb-4"><h3>{posttype==="books" ? "Book Reviews" : "All Posts"}</h3></div>
         <div className="d-flex flex-wrap inline justify-content-between">
