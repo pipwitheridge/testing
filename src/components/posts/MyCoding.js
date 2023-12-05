@@ -13,7 +13,10 @@ function MyCoding() {
     <br></br>
     <div><strong>January 2023 {"\u2192"}</strong> I built this personal website to share some thoughts via book reviews and blog posts. I could've used a website generator like Wix or WordPress, but I wanted to have a go coding it myself. As part of the process I wanted to 
     learn how to build a comments system. Feel free to leave a comment on a book review or blog post... I hope the website doesn't break!
-    </div>          
+    </div>     
+    <br></br>
+    <div><strong>September 2023 {"\u2192"}</strong> I built a to-do app using Node.JS, Express Handlebars and SQLite, mainly to learn how SQLite works. I made a short <a className="smallAnchor" href="https://youtu.be/xoHM7LUuceA">video</a> demonstrating the end product.   
+    </div>     
     <br></br>
     <p>In my post <a href="https://pipwitheridge.vercel.app/blog/learning-from-sal-khan">"Learning From Sal Khan"</a> I wrote about the learning process and what it taught me about education in general.</p>
     <p>If you want to see my source code you can check out my Github page <a href="https://github.com/pipwitheridge">here</a>.</p>
