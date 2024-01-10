@@ -2,7 +2,19 @@
   {
     "number": 1,
     "postType": "books",
-    "postDate": "1st January 2023",
+    "postDate": "10th January 2024",
+    "bookTitle": "The Atonement",
+    "URLTitle": "the-atonement",
+    "authorLine": "By Leon Morris",
+    "coverImage": "theAtonement.png",
+    "previewHeadline": "Exploring the crux of Christianity",
+    "previewBody": "The meaning and significance of the cross in plain English.",
+    "mainTextFile": "TheAtonement.js"
+  },
+  {
+    "number": 1,
+    "postType": "books",
+    "postDate": "1st January 2024",
     "bookTitle": "Mendeleyev's Dream",
     "URLTitle": "mendeleyevs-dream",
     "authorLine": "By Paul Strathern",
@@ -24,7 +36,7 @@
     "mainTextFile": "UnderstandingByDesign.js"
   },
   {
-    "number": 1,
+    "number": 4,
     "postType": "books",
     "postDate": "24th August 2023",
     "bookTitle": "A Joined-Up Life",
