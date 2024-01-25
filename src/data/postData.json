@@ -3,13 +3,13 @@
     "number": 1,
     "postType": "books",
     "postDate": "26th January 2024",
-    "bookTitle": "Mere Christianity",
-    "URLTitle": "mere-christianity",
+    "bookTitle": "Mere Evangelism",
+    "URLTitle": "mere-evangelism",
     "authorLine": "By Randy Newman",
-    "coverImage": "mereChristianity.png",
-    "previewHeadline": "Let's Learn from Lewis on Evangelism",
+    "coverImage": "mereEvangelism.png",
+    "previewHeadline": "Let's Learn From Lewis",
     "previewBody": "10 insights from C.S. Lewis to help you share your faith.",
-    "mainTextFile": "TheAtonement.js"
+    "mainTextFile": "MereEvangelism.js"
   },
   {
     "number": 1,
