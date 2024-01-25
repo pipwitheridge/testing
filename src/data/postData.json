@@ -2,6 +2,18 @@
   {
     "number": 1,
     "postType": "books",
+    "postDate": "26th January 2024",
+    "bookTitle": "Mere Christianity",
+    "URLTitle": "mere-christianity",
+    "authorLine": "By Randy Newman",
+    "coverImage": "mereChristianity.png",
+    "previewHeadline": "Let's Learn from Lewis on Evangelism",
+    "previewBody": "10 insights from C.S. Lewis to help you share your faith.",
+    "mainTextFile": "TheAtonement.js"
+  },
+  {
+    "number": 1,
+    "postType": "books",
     "postDate": "10th January 2024",
     "bookTitle": "The Atonement",
     "URLTitle": "the-atonement",
@@ -24,7 +36,7 @@
     "mainTextFile": "MendeleyevsDream.js"
   },
   {
-    "number": 1,
+    "number": 4,
     "postType": "books",
     "postDate": "7th November 2023",
     "bookTitle": "Understanding by Design",
